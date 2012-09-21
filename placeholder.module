@@ -1,0 +1,18 @@
+<?php
+
+
+function placeholder_preprocess_page(&$vars) {
+  //global $base_path;
+  //$vars['path_to_theme'] = $base_path.drupal_get_path('theme', variable_get('theme_default', NULL));
+  
+  drupal_add_js(drupal_get_path('module', 'placeholder') .'/placeholder.js', 'file');
+  
+  // placeholders for all forms
+  drupal_add_js('jQuery(document).ready(function ()
+    {
+      jQuery("[placeholder]").placeholder();
+    });',
+    array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
+  );
+  
+}

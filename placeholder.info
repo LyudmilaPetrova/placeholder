@@ -1,0 +1,8 @@
+name = placeholder
+description = "Form elements placeholder's attribute js-script"
+
+core = 7.x
+package = Custom
+
+files[] = placeholder.module
+
